@@ -61,6 +61,20 @@ Things you may want to cover:
 - has_many :users, through: :groups_users
 
 
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key|
+|group_id|integer|null: false, foreign_key|
+|body|text||
+|image|string||
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
 ## likesテーブル
 
 |Column|Type|Options|
