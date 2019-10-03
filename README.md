@@ -41,13 +41,13 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|image|string||
 |email|string|null: false, unique: true|
 |encrypted_password|string|null: false, unique: true|
 
 ### Association
 - has_many :groups_users
 - has_many :groups, through: :groups_users
+- has_many :messages
 
 
 ## groupsテーブル
@@ -59,6 +59,7 @@ Things you may want to cover:
 ### Association
 - has_many :groups_users
 - has_many :users, through: :groups_users
+- has_many :messages
 
 
 ## messagesテーブル
@@ -75,17 +76,5 @@ Things you may want to cover:
 - belongs_to :user
 
 
-## likesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|message_id|integer|null: false, foreign_key|
-|user_id|integer|null: false, foreign_key|
-|created_at|integer||
-|updated_at|integer||
-
-### Association
-- belongs_to :user
-- belongs_to :group
 
 
