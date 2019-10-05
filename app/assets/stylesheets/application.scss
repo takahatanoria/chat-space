@@ -13,3 +13,54 @@
  *= require_tree .
  *= require_self
  */
+
+@import "reset";
+@import "font-awesome";
+@import "clearfix";
+@import "variable";
+@import "flash__box";
+@import "side-header";
+@import "groups";
+@import "main__header";
+@import "messages";
+@import "form";
+
+.wrapper{
+  color: #000;
+  box-sizing: border-box;    
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color:#ffffff;
+  }
+  
+a:hover {
+  color:#ffffff;
+  }
+  
+a:visited {
+  color:#ffffff;
+  }
+  
+  .chat__side{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    color: white;
+    float: left;   
+  }
+
+  .chat__main {
+    color: #000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: calc(100vw - 300px);
+    float: left;
+  }
+    
+
+
