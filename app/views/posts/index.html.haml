@@ -54,9 +54,9 @@
         %input{:type => "hidden"}/
         .input-box
           %input{:type => "text", :placeholder => "type a message"}/
-          .input-box__image
-            = fa_icon 'image'
-            .input-box__image__file
+          %label.input-box__image{:for => "message_image"}
+            %i.fa.fa-image
+              %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
         .input.submit-btn{"data-disable-with" => "Send", :type => "submit", :value => "Send"}/
         Send
 
