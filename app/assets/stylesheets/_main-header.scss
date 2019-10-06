@@ -1,4 +1,4 @@
-.main__header{
+.main-header{
   color: #000;
   box-sizing: border-box;
   margin: 0;
@@ -9,14 +9,14 @@
   border-bottom: solid 1px #eee;
   overflow: scroll;
 
-  &__left__box{
+  &__left-box{
     color: #000;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     margin-top: 35px;
 
-    .main-header__left-box__current-group{
+    &__current-group{
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -26,7 +26,7 @@
       margin-bottom: 15px;
     }
 
-    .main-header__left-box__member-list{
+    &__member-list{
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -35,7 +35,7 @@
       font-size: 12px;
       color: #999999;
 
-      .main-header__left-box__member-list__member{
+      &__member{
         list-style: none;
         font-size: 12px;
         color: #999999;
@@ -44,7 +44,7 @@
         padding: 0;
       }
 
-      .main-header__left-box__member-list__member{
+      &__member{
         list-style: none;
         font-size: 12px;
         color: #999999;
@@ -53,7 +53,7 @@
         padding: 0;
         margin-left: 0.3rem;
       }
-      .main-header__left-box__member-list__member{
+      &__member{
         list-style: none;
         font-size: 12px;
         color: #999999;
@@ -65,7 +65,7 @@
     }
   }
     
-    .main-header__edit-btn{
+    &__edit-btn{
     color: #38aef0;
     box-sizing: border-box;
     margin: 0;

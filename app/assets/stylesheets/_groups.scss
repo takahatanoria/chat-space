@@ -18,7 +18,7 @@
       margin: 0;
       padding: 0;
       margin-bottom: 40px;
-      .group__group-name{
+      &__group-name{
         color: white;
         box-sizing: border-box;
         margin: 0;
@@ -26,7 +26,7 @@
         font-size: 15px;
         margin-bottom: 5px;
       }
-      .group__latest-message{
+      &__latest-message{
         color: white;
         box-sizing: border-box;
         margin: 0;

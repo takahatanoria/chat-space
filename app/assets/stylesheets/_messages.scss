@@ -19,7 +19,7 @@
     padding: 0;
     padding-bottom: 40px;
 
-    .message__upper-info{
+    &__upper-info{
       color: #000;
       box-sizing: border-box;
       margin: 0;
@@ -27,7 +27,7 @@
       display: flex;
       margin-bottom: 10px;
 
-      .message__upper-info__talker{
+      &__talker{
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -35,7 +35,7 @@
         font-size: 16px;
         font-weight: bold;
       }
-      .message__upper-info__date{
+      &__date{
         box-sizing: border-box;
         margin: 0;
         padding: 0;
