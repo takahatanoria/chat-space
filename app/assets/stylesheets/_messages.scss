@@ -1,0 +1,48 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.messages{
+  color: #000;
+  box-sizing: border-box;
+  margin: 0;
+  height: calc(100vh - 190px);
+  padding: 46px 40px;
+  background-color: #fafafa;
+  overflow: scroll;
+
+  .message{
+    color: #000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 40px;
+
+    .message__upper-info{
+      color: #000;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      margin-bottom: 10px;
+
+      .message__upper-info__talker{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: #434a54;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .message__upper-info__date{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+  }  
+}

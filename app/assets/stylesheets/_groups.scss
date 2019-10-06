@@ -1,0 +1,42 @@
+.groups{
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  padding: 20px 20px 0;
+  overflow: scroll;
+  .a{
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+}
+
+    .group{
+      color: white;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 40px;
+      .group__group-name{
+        color: white;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      .group__latest-message{
+        color: white;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 11px;
+      }
+
+
+    }
+
+
+
+}
