@@ -18,7 +18,7 @@
     width: 100%;
     font-weight: bold;
    
-    .side-header__box__user__name {
+    &__user__name {
       color: white;
       font-weight: bold;
       box-sizing: border-box;
@@ -26,7 +26,7 @@
       padding: 0;
     }  
         
-    .side-header__box__menu{
+    &__menu{
       color: white;
       font-weight: bold;
       margin: 0;
@@ -63,11 +63,8 @@
             -webkit-font-smoothing: antialiased;
           }
       }
+    &__menu__edit-user{
 
-
-
-    // &__new__group::before
-    .side-header__box__menu__edit-user{
       color: white;
       font-weight: bold;
       list-style: none;
