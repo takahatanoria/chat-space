@@ -1,28 +1,6 @@
-.flash__box
-  .alert
-    ログインしました
-
 .wrapper
+  = render 'shared/side_bar'
 
-  .chat__side
-    .side-header
-      .side-header__box
-        .side-header__box__user__name 
-          aiueo
-        .side-header__box__menu
-          .side-header__box__menu__new__group
-            =link_to "/" do
-              = fa_icon 'edit'
-          .side-header__box__menu__edit-user
-            =link_to "/" do
-              = fa_icon 'cog'
-
-    .groups
-      .group
-        .group__group-name 
-          a
-        .group__latest-message 
-          abc
           
   .chat__main
     .main-header
@@ -49,15 +27,13 @@
             2019/09/30(Mon) 01:21:01
         %p.message__text 
           abc
-    %form.form
-      .new_message
-        %input{:type => "hidden"}/
-        .input-box
-          %input{:type => "text", :placeholder => "type a message"}/
-          %label.input-box__image{:for => "message_image"}
-            %i.fa.fa-image
-              %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-        .input.submit-btn{"data-disable-with" => "Send", :type => "submit", :value => "Send"}/
-        Send
 
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
           

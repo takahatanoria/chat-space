@@ -1,29 +1,21 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
 @import "reset";
+@import "config/colors";
+@import "config/font-size.scss";
+@import "modules/flash";
 @import "font-awesome";
 @import "clearfix";
 @import "variable";
-@import "flash__box";
-@import "side-header";
-@import "groups";
+// @import "side-header";
 @import "main-header";
 @import "messages";
-@import "form";
+// @import "form";
+@import "user";
+@import "modules/group";
+@import "modules/side_bar.scss";
+@import "modules/chat";
+// @import "groups";
+
+
 
 .wrapper{
   color: #000;
@@ -44,14 +36,14 @@ a:visited {
   color:#ffffff;
   }
   
-  .chat__side{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 300px;
-    color: white;
-    float: left;   
-  }
+  // .chat__side{
+  //   box-sizing: border-box;
+  //   margin: 0;
+  //   padding: 0;
+  //   width: 300px;
+  //   color: white;
+  //   float: left;   
+  // }
 
   .chat__main {
     color: #000;
