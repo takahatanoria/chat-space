@@ -14,6 +14,5 @@ class Group < ApplicationRecord
     end
   end
 
-  # グループにネストしてるメッセージだからさらにアソシエーションあるからできる
 
 end
