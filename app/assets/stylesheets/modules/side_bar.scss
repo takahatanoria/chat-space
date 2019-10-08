@@ -1,0 +1,238 @@
+.side-bar {
+  box-sizing: border-box;
+  color: $white;
+  width: 300px;
+  // height: 100vw;
+  a {
+    color:$light_blue;
+    }
+    
+  a:hover {
+    color:$light_blue;
+    }
+    
+  a:visited {
+    color:$light_blue;
+    }
+
+    a {
+      text-decoration: none;
+      }  
+
+  .header {
+    background-color: $side_blue_dark;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 20px;
+    &__name {
+      display: inline-block;
+      font-size: $side_header_font;
+      font-weight: bold;
+    }
+    &__lists {
+      display: inline-block;
+      float: right;
+      .list {
+        display: inline-block;
+      }
+      .icon {
+        color: $white;
+        font-size: $side_header_font;
+      }
+    }
+  }
+
+  .groups {
+    background-color: $side_blue_light;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+    .group {
+      box-sizing: border-box;
+      padding: 20px 0 40px;
+      &__name {
+        color: $white;
+        font-size: $side_group_name;
+      }
+      &__message {
+        color: $white;
+        font-size: $side_group_message;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+// .side-bar {
+//   box-sizing: border-box;
+//   color: $white;
+//   width: 300px;
+//   float: left;
+//   height: 100vw;
+
+//   a {
+//     color:#ffffff;
+//     }
+    
+//   a:hover {
+//     color:#ffffff;
+//     }
+    
+//   a:visited {
+//     color:#ffffff;
+//     }
+
+//   .header {
+//     background-color: $side_blue_dark;
+//     height: 100px;
+//     line-height: 100px;
+//     padding: 0 20px;
+//     &__name {
+//       display: inline-block;
+//       font-size: $side_header_font;
+//       font-weight: bold;
+//     }
+//     &__lists {
+//       display: inline-block;
+//       float: right;
+//       .list {
+//         display: inline-block;
+//       }
+//       .icon {
+//         color: $white;
+//         font-size: $side_header_font;
+//       }
+//     }
+//   }
+
+//   .groups {
+//     background-color: $side_blue_light;
+//     height: calc(100vw - 100px);
+//     padding: 0 20px;
+//     .group {
+//       box-sizing: border-box;
+//       padding: 20px 0 40px;
+//       &__name {
+//         color: $white;
+//         font-size: $side_group_name;
+//       }
+//       &__message {
+//         color: $white;
+//         font-size: $side_group_message;
+//         margin-top: 5px;
+//       }
+//     }
+//   }
+// }
+
+
+
+
+
+
+// .side-header{
+//   color: white;
+//   box-sizing: border-box;
+//   margin: 0;
+//   background-color: #253141;
+//   height: 100px;
+//   display: flex;
+//   align-items: center;
+//   padding: 0 20px;
+  
+//   &__box{
+//     color: white;
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+//     display: flex;
+//     justify-content: space-between;
+//     width: 100%;
+//     font-weight: bold;
+   
+//     &__user__name {
+//       color: white;
+//       font-weight: bold;
+//       box-sizing: border-box;
+//       margin: 0;
+//       padding: 0;
+//     }  
+        
+//     &__menu{
+//       color: white;
+//       font-weight: bold;
+//       margin: 0;
+//       padding: 0;
+//       list-style: none;
+//       display: flex;
+
+//     }
+    
+//       &__new__group{
+//         color: white;
+//         font-weight: bold;
+//         list-style: none;
+//         box-sizing: border-box;
+//         margin: 0;
+//         padding: 0;
+//         margin-left: 0.3rem;
+//         white-space: nowrap;
+//         display: flex;
+   
+//         .a{
+//           font-weight: bold;
+//           list-style: none;
+//           white-space: nowrap;
+//         }
+       
+//           .li{
+//             list-style: none;
+//             white-space: nowrap;
+//             display: inline-block;
+//             font: normal normal normal 14px/1 FontAwesome;
+//             font-size: inherit;
+//             text-rendering: auto;
+//             -webkit-font-smoothing: antialiased;
+//           }
+//       }
+//     &__menu__edit-user{
+
+//       color: white;
+//       font-weight: bold;
+//       list-style: none;
+//       box-sizing: border-box;
+//       margin: 0;
+//       padding: 0;
+//       margin-left: 0.3rem;
+
+//       .a{
+//         font-weight: bold;
+//         list-style: none;
+//         box-sizing: border-box;
+//         text-decoration: none;
+//         color: white;
+//       }
+// }  
+// }
+// }
+
+// .chat__side
+//   .side-header
+//     .side-header__box
+//       %h3.side-header__box__user__name 
+//         = current_user.name
+//       %ul.side-header__box__menu
+//         %li.side-header__box__menu__new__group
+//           = link_to new_group_path do
+//             = fa_icon 'edit'
+//         %li.side-header__box__menu__edit-user
+//           = link_to edit_user_path(current_user) do
+//             = fa_icon 'cog', class: 'icon'
+
+//   .groups
+//     - current_user.groups.each do |group|
+//       .group
+//         = link_to group_messages_path(group) do
+//           .group__name
+//             = group.name
+//           .group__message
+//             メッセージはまだありません。

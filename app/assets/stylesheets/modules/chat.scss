@@ -1,0 +1,359 @@
+.chat {
+  width: calc(100% - 300px);
+  float: left;
+  // overflow: scroll;
+  // height: 100vh;
+
+  .header {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 0 40px;
+    .left-header {
+      float: left;
+      &__title {
+        color: #333;
+        font-size: 20px;
+        margin-top: 35px;
+      }
+      &__members {
+        // @include flexbox;
+        color: $light_gray;
+        font-size: 12px;
+        margin-top: 15px;
+        .member {
+          display: inline-block;
+          padding-right: 5px;
+        }
+      }
+    }
+    .right-header {
+      border: 1px solid $light_blue;
+      color: $light_blue;
+      float: right;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      &__button {
+        color: $light_blue;
+        text-decoration: none;
+
+        a {
+          color:$light_blue;
+          }
+          
+        a:hover {
+          color:$light_blue;
+          }
+          
+        a:visited {
+          color:$light_blue;
+          }
+
+          a {
+            text-decoration: none;
+            }  
+
+      }
+    }
+  }
+
+  .messages {
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    padding: 46px 40px 0;
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    .message {
+      .upper-message {
+        display: flex;
+        &__user-name {
+          color: $black;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          color: $light_gray;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      .lower-message {
+        margin-top: 10px;
+        &__content {
+          color: $black;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $light_blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
+}
+
+
+// .chat {
+//   width: calc(100% - 300px);
+//   // float: left;
+//   .header {
+//     box-sizing: border-box;
+//     height: 100px;
+//     padding: 0 40px;
+//     .left-header {
+//       float: left;
+//       &__title {
+//         color: #333;
+//         font-size: 20px;
+//         margin-top: 35px;
+//       }
+//       &__members {
+//         // @include flexbox;
+//         color: $light_gray;
+//         font-size: 12px;
+//         margin-top: 15px;
+//         .member {
+//           display: inline-block;
+//           padding-right: 5px;
+//         }
+//       }
+//     }
+//     .right-header {
+//       border: 1px solid $light_blue;
+//       color: $light_blue;
+//       float: right;
+//       height: 40px;
+//       line-height: 40px;
+//       margin-top: 28px;
+//       padding: 0 20px;
+//       &__button {
+//         color: $light_blue;
+//         text-decoration: none;
+
+        // a {
+        //   color:$light_blue;
+        //   }
+          
+        // a:hover {
+        //   color:$light_blue;
+        //   }
+          
+        // a:visited {
+        //   color:$light_blue;
+        //   }
+//       }
+//     }
+//   }
+
+//   .messages {
+//     background-color: #FAFAFA;
+//     box-sizing: border-box;
+//     padding: 46px 40px 0;
+//     height: calc(100% - 100px - 90px);
+//     .message {
+//       .upper-message {
+//         display: flex;
+//         &__user-name {
+//           color: $black;
+//           font-size: 16px;
+//           font-weight: bold;
+//         }
+//         &__date {
+//           color: $light_gray;
+//           font-size: 12px;
+//           padding-left: 10px;
+//         }
+//       }
+//       .lower-message {
+//         margin-top: 10px;
+//         &__content {
+//           color: $black;
+//           font-size: 14px;
+//           margin-bottom: 40px;
+//         }
+//       }
+//     }
+//   }
+
+//   .form {
+//     background-color: #DDDDDD;
+//     box-sizing: border-box;
+//     height: 90px;
+//     padding: 20px 50px 20px 40px;
+//     &__message {
+//       border: none;
+//       float: left;
+//       height: 50px;
+//       width: calc(100% - 150px);
+//     }
+//     &__mask {
+//       background-color: $white;
+//       float: left;
+//       height: 50px;
+//       padding-right: 10px;
+//       &__image {
+//         font-size: 20px;
+//         line-height: 50px;
+//       }
+//       .hidden {
+//         display: none;
+//       }
+//     }
+//     &__submit {
+//       background-color: $light_blue;
+//       border: none;
+//       color: $white;
+//       float: right;
+//       font-size: 16px;
+//       height: 50px;
+//       margin-left: 15px;
+//       padding: 0 30px;
+//     }
+//   }
+// }
+
+// .form{
+//   color: #000;
+//   box-sizing: border-box;
+//   margin: 0;
+//   height: 90px;
+//   padding: 20px 40px;
+//   background-color: #ddd;
+
+//   .new_message{
+//     color: #000;
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+//     display: flex;
+
+//     input {
+//       box-sizing: border-box;
+//       margin: 0;
+//       padding: 0;
+//       font-family: inherit;
+//       font-size: inherit;
+//       font-weight: inherit;
+//       width: 100vw;
+//     } 
+
+//     .input-box{
+//       color: #000;
+//       box-sizing: border-box;
+//       margin: 0;
+//       padding: 0;
+//       position: relative;
+//       width: 100%;
+
+//     input{
+//       box-sizing: border-box;
+//       margin: 0;
+//       font-family: inherit;
+//       font-size: inherit;
+//       font-weight: inherit;
+//       height: 50px;
+//       width: 100%;
+//       padding: 0 40px 0 10px;
+//       color: #434a54;
+//       border-style: none;
+//     }
+
+//     &__text{
+//       box-sizing: border-box;
+//       margin: 0;
+//       font-family: inherit;
+//       font-size: inherit;
+//       font-weight: inherit;
+//       height: 50px;
+//       width: 100%;
+//       padding: 0 40px 0 10px;
+//       color: #434a54;
+//       border-style: none;
+//     }
+
+//     &__image{
+//       color: #000;
+//       box-sizing: border-box;
+//       font-size: 1.3rem;
+//       position: absolute;
+//       top: 10px;
+//       right: 10px;
+//       cursor: pointer;
+    
+//   &__file{
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+//     font-family: inherit;
+//     font-size: inherit;
+//     font-weight: inherit;
+//     display: none;
+//     }
+//   }
+// }
+//   .input.submit-btn{
+//     box-sizing: border-box;
+//     margin: 0;
+//     font-family: inherit;
+//     font-size: inherit;
+//     font-weight: inherit;
+//     width: 100px;
+//     height: 50px;
+//     padding: 0 30px;
+//     margin-left: 15px;
+//     background-color: #38aef0;
+//     color: white;
+//     cursor: pointer;
+//     line-height: 50px    
+//     }
+//   }
+// }  
+
+
+// %form.form
+// .new_message
+//   %input{:type => "hidden"}/
+//   .input-box
+//     %input{:type => "text", :placeholder => "type a message"}/
+//     %label.input-box__image{:for => "message_image"}
+//       %i.fa.fa-image
+//         %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+//   .input.submit-btn{"data-disable-with" => "Send", :type => "submit", :value => "Send"}/
+//   Send
+
+
+
