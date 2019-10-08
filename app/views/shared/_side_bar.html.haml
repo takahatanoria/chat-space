@@ -16,27 +16,6 @@
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
 
 
--# .chat__side
--#   .side-header
--#     .side-header__box
--#       %h3.side-header__box__user__name 
--#         = current_user.name
--#       %ul.side-header__box__menu
--#         %li.side-header__box__menu__new__group
--#           = link_to new_group_path do
--#             = fa_icon 'edit'
--#         %li.side-header__box__menu__edit-user
--#           = link_to edit_user_path(current_user) do
--#             = fa_icon 'cog', class: 'icon'
-
--#   .groups
--#     - current_user.groups.each do |group|
--#       .group
--#         = link_to group_messages_path(group) do
--#           .group__name
--#             = group.name
--#           .group__message
--#             メッセージはまだありません。

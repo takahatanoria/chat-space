@@ -1,21 +1,19 @@
-@import "reset";
-@import "config/colors";
-@import "config/font-size.scss";
-@import "modules/flash";
 @import "font-awesome";
+@import "config/colors";
+@import "config/font-size";
+@import "config/reset";
+@import "modules/side_bar";
+@import "modules/chat";
+@import "modules/flash";
 @import "clearfix";
 @import "variable";
-// @import "side-header";
-@import "main-header";
-@import "messages";
-// @import "form";
 @import "user";
 @import "modules/group";
-@import "modules/side_bar.scss";
-@import "modules/chat";
+// @import "messages";
+// @import "form";
+// @import "side-header";
 // @import "groups";
-
-
+// @import "main-header";
 
 .wrapper{
   color: #000;
@@ -24,17 +22,17 @@
   padding: 0;
 }
 
-a {
-  color:#ffffff;
-  }
+// a {
+//   color:#ffffff;
+//   }
   
-a:hover {
-  color:#ffffff;
-  }
+// a:hover {
+//   color:#ffffff;
+//   }
   
-a:visited {
-  color:#ffffff;
-  }
+// a:visited {
+//   color:#ffffff;
+//   }
   
   // .chat__side{
   //   box-sizing: border-box;
@@ -45,15 +43,15 @@ a:visited {
   //   float: left;   
   // }
 
-  .chat__main {
-    color: #000;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: calc(100vw - 300px);
-    float: left;
-  }
-    
+  // .chat__main {
+  //   color: #000;
+  //   box-sizing: border-box;
+  //   margin: 0;
+  //   padding: 0;
+  //   width: calc(100vw - 300px);
+  //   float: left;
+  // }
+
 
 
 

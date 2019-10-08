@@ -1,0 +1,34 @@
+.wrapper
+  = render 'shared/side_bar'
+          
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          a
+        %ul.left-header__members
+          Member：
+          %li.member
+            brooks
+          %li.member
+            bbb 
+          %li.member
+            aiueo
+      %a{:href => "/groups/1938/edit"}
+      .right-header
+        .right-header__button
+          = link_to "Edit",edit_group_path(@group)     
+    .messages
+      = render partial: 'message', collection: @messages, as: :message
+        
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+          
+
+
