@@ -5,15 +5,11 @@
     .header
       .left-header
         .left-header__title
-          a
-        %ul.left-header__members
-          Member：
-          %li.member
-            brooks
-          %li.member
-            bbb 
-          %li.member
-            aiueo
+          = @group.name
+        .left-header__members
+          - @group.users.each do |user|
+            = user.name
+
       %a{:href => "/groups/1938/edit"}
       .right-header
         .right-header__button
