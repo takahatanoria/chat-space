@@ -21,8 +21,6 @@ class MessagesController < ApplicationController
     end
   end
 
-  "/groups/group_id/messages"
-
   private
 
   def message_params
