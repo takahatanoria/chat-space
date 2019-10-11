@@ -4,22 +4,22 @@
       var image = message.image ? `<img src="${message.image}">` : image = ""
 
       var html = `<div class="message">
-      <div class="upper-message">
-      <div class="upper-message__user-name">
-      ${message.user}
-      </div>
-      <div class="upper-message__date">
-      ${message.created_at}
-      </div>
-      </div>
-      <div class="lower-message">
-      <p class="lower-message__content">
-    ${message.content}
-      </p>
-    ${image}  
-      </div>
-      </div>`
-      return html;
+                    <div class="upper-message">
+                      <div class="upper-message__user-name">
+                        ${message.user}
+                      </div>
+                      <div class="upper-message__date">
+                        ${message.created_at}
+                      </div>
+                    </div>
+                    <div class="lower-message">
+                      <p class="lower-message__content">
+                        ${message.content}
+                      </p>
+                        ${image}  
+                    </div>
+                  </div>`
+                    return html;
     }
     $('#new_message').on('submit', function(e){
       e.preventDefault();
