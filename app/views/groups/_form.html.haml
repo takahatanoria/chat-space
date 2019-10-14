@@ -11,7 +11,6 @@
     .chat-group-form__field--right
       = f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'
   
-    / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
       = f.label :users, "チャットメンバーを追加", class: 'chat-group-form__label', for:'user-search-field'    
@@ -23,17 +22,17 @@
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
         = f.label :user_ids, "チャットメンバー", class: 'chat-group-form__label'      
-    .chat-group-form__field--right
-      .chat-group-users
-        - @group.users.each do |user|
-          .chat-group-user
-            %input{name: "group[user_ids][]", type: 'hidden', value: "#{ user.id }"}>/
-            %p.chat-group-user__name
-              = user.name
-            - if user.name == current_user.name
-            - else
-              %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
-                削除               
+      .chat-group-form__field--right
+        #chat-group-users
+          - @group.users.each do |user|
+            .chat-group-user
+              %input{name: "group[user_ids][]", type: 'hidden', value: "#{ user.id }"}>/
+              %p.chat-group-user__name
+                = user.name 
+              - if user.name == current_user.name
+              - else
+                %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
+                  削除               
           #member_search_result
 
   .chat-group-form__field.clearfix
