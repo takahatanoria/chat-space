@@ -18,8 +18,7 @@
                     </div>
                   </div>`
                     return html;
-    }
-    
+    }   
     $('#new_message').on('submit', function(e){
       e.preventDefault();
       var formData = new FormData(this);
@@ -40,23 +39,19 @@
       })
       .fail(function(){
         alert('エラー'); 
-
       })
       .always(() => {
         $(".form__submit").removeAttr("disabled");
       });
     })
-
   var reloadMessages = function() {
     if (window.location.href.match(/messages/)){  
-      last_message_id = $('.message:last').data("message-id");
-    
+      last_message_id = $('.message:last').data("message-id");   
     $.ajax({
       url: "api/messages",
       type: 'GET',
       dataType: 'json',
       data: {id: last_message_id}
-
     })
     .done(function (messages) { 
       var insertHTML = '';
@@ -73,8 +68,3 @@
   };
   setInterval(reloadMessages, 5000);
 });
-
-
-
-
-
