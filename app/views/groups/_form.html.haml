@@ -23,7 +23,6 @@
     .chat-group-form__field.clearfix
       .chat-group-form__field--left
         = f.label :user_ids, "チャットメンバー", class: 'chat-group-form__label'      
-
     .chat-group-form__field--right
       .chat-group-users
         - @group.users.each do |user|
@@ -32,11 +31,9 @@
             %p.chat-group-user__name
               = user.name
             - if user.name == current_user.name
-              %span
             - else
               %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
-                削除
-                
+                削除               
           #member_search_result
 
   .chat-group-form__field.clearfix
