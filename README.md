@@ -68,7 +68,7 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key|
 |group_id|integer|null: false, foreign_key|
-|body|text||
+|content|text||
 |image|string||
 
 ### Association
