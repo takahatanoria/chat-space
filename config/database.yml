@@ -12,24 +12,10 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: 5 
-  username: ec2-user@ip-172-31-34-114
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password:
   socket: /tmp/mysql.sock
-
-
-  # adapter: mysql2
-  # encoding: utf8
-  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  # username: root
-  # password:
-  # socket: /tmp/mysql.sock
-  # password: password: ENV['DATABASE_PASSWORD'] 
-  # password: tabi0305
-  # password:
-  # password: <%= ENV[DATABASE_PASSWORD] %>
-  # password: root
-  # password: 
-
 
 development:
   <<: *default
@@ -64,6 +50,5 @@ test:
 production:
   <<: *default
   database: chat-space_production
-  username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
+  username: chat-space
+  password: <%= ENV['CHAT-SPACE_DATABASE_PASSWORD'] %>
