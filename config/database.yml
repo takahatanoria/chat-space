@@ -20,11 +20,11 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: ec2-user@ip-172-31-34-114
-  password: password: ENV['DATABASE_PASSWORD'] 
+  # password: password: ENV['DATABASE_PASSWORD'] 
 
   # password: tabi0305
   # password:
-  # password: <%= ENV[DATABASE_PASSWORD] %>
+  password: <%= ENV[DATABASE_PASSWORD] %>
   # password: root
   # password: 
   socket: /tmp/mysql.sock
@@ -64,10 +64,10 @@ production:
   database: chat-space_production
   username: ec2-user@ip-172-31-34-114
   # password: tabi0305
-  password: ENV['DATABASE_PASSWORD']
+  # password: ENV['DATABASE_PASSWORD']
 
-  # password: <%= ENV[DATABASE_PASSWORD] %>
-  socket: /tmp/mysql.sock
+  password: <%= ENV[DATABASE_PASSWORD] %>
+  # socket: /tmp/mysql.sock
 
-  # socket: /var/lib/mysql/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
   
