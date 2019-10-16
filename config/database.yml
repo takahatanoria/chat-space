@@ -10,11 +10,20 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
+  # adapter: mysql2
+  # encoding: utf8
+  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # username: root
+  # password:
+  # socket: /tmp/mysql.sock
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
+  username: ec2-user@ip-172-31-34-114
   password:
+  # password: <%= ENV[DATABASE_PASSWORD] %>
+  # password: root
+  # password: 
   socket: /tmp/mysql.sock
 
 development:
@@ -50,7 +59,8 @@ test:
 production:
   <<: *default
   database: chat-space_production
-  username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: ec2-user@ip-172-31-34-114
+  # password: tabi0305
+  password: <%= ENV[DATABASE_PASSWORD] %>
   socket: /var/lib/mysql/mysql.sock
   
