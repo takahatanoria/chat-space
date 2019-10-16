@@ -20,8 +20,8 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: ec2-user@ip-172-31-34-114
-  password:
-  # password: <%= ENV[DATABASE_PASSWORD] %>
+  # password:
+  password: <%= ENV[DATABASE_PASSWORD] %>
   # password: root
   # password: 
   socket: /tmp/mysql.sock
