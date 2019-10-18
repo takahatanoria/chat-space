@@ -1,10 +1,10 @@
   $(function(){
     function buildMessage(message){
-      var image = message.image ? `<img src="${message.image}">` : image = ""
-      var html = `<div class="message" >
+      var image = message.image ? `<img src="${message.image}">` : image = " ";
+      var html = `<div class="message">
                     <div class="upper-message">
                       <div class="upper-message__user-name">
-                        ${message.user}
+                        ${message.name}
                       </div>
                       <div class="upper-message__date">
                         ${message.created_at}
@@ -42,10 +42,37 @@
       })
       .always(() => {
         $(".form__submit").removeAttr("disabled");
-      });
+      })
     })
+
+
+    $(function(){
+      function buildHTML(message){
+        
+        var image = message.image ? `<img class="lower-message__image" src=${message.image} >` : " ";
+        var html = `<div class="message" data-message-id="${message.id}" >
+                      <div class="upper-message">
+                        <div class="upper-message__user-name">
+                          ${message.user_name}
+                        </div>
+                        <div class="upper-message__date">
+                          ${message.created_at}
+                        </div>
+                      </div>
+                      <div class="lower-message">
+                        <p class="lower-message__content">
+                          ${message.content}
+                        </p>
+                          ${image}  
+                      </div>
+                    </div>`
+                      return html;
+      }   
+
+//自動更新はここから
+
   var reloadMessages = function() {
-    if (window.location.href.match(/messages/)){  
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){ 
       last_message_id = $('.message:last').data("message-id");   
     $.ajax({
       url: "api/messages",
@@ -56,10 +83,10 @@
     .done(function (messages) { 
       var insertHTML = '';
       messages.forEach(function (message) {
-        insertHTML = buildMessage(message); 
+        insertHTML = buildHTML(message); 
         $('.messages').append(insertHTML);
       })
-      $('div').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
     .fail(function () {
       alert('自動更新に失敗しました');
@@ -67,4 +94,5 @@
   }
   };
   setInterval(reloadMessages, 5000);
+});
 });
