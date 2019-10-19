@@ -6,17 +6,17 @@
   a {
     color:$light_blue;
     }
+
+  a:visited {
+    color:$light_blue;
+      }
     
   a:hover {
     color:$light_blue;
     }
-    
-  a:visited {
-    color:$light_blue;
-    }
 
-    a {
-      text-decoration: none;
+  a {
+    text-decoration: none;
       }  
 
   .header {
